@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<DocumentFragment>
+  <header
+    class="header"
+  >
+    <h1
+      style="text-align: center;"
+    >
+      Triangle App
+    </h1>
+  </header>
+</DocumentFragment>
+`;
