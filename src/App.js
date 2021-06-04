@@ -1,11 +1,11 @@
 import Header from "./components/Header"
-import Sides from './components/Sides'
+import Main from './components/Main'
+
 function App() {
   return (
     <div className="container">
-
       <Header title = {'Triangle App'} style = {{Header:'center'}} />
-      <Sides />
+      <Main />
     </div>
   );
 }
