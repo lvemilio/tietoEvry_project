@@ -2,7 +2,6 @@ import React,{useEffect, useLayoutEffect, } from 'react'
 
 import {useState} from 'react'
 import rough from "roughjs/bundled/rough.esm";
-import background from './background.jpg'
 
 
 
@@ -347,7 +346,7 @@ const useHistory = initialState => {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
-        style = {{borderStyle:'solid', background: background}}
+        style = {{borderStyle:'solid'}}
       >
         Canvas
       </canvas>
