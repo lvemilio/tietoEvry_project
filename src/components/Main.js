@@ -41,6 +41,9 @@ function Main() {
               setSide3(e.target.value)
             }
           }
+          else{
+            alert("Please input only whole numbers.")
+          }
           setIsSubmitted(false)
   }
   //Object that stores triangle types
