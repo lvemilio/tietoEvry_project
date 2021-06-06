@@ -9,7 +9,7 @@ function Main() {
 
 
   //Constructor setting up the Sides form and its state
-    const [Side1,setSide1] = useState('')
+    const[Side1,setSide1] = useState('')
     const[Side2,setSide2] = useState('')
     const[Side3,setSide3] = useState('')
     const[isSubmitted,setIsSubmitted] = useState(false)
@@ -21,8 +21,8 @@ function Main() {
         alert("Please specify all triangle sides.") 
     }
     else{ 
-         setIsSubmitted(true);
-         getTriangleType();
+        setIsSubmitted(true);
+        getTriangleType();
     }  
   }
   //HandleChange is called every time the user changed any of the input fields, since it is assumed
@@ -71,7 +71,7 @@ function Main() {
             return TRIANGLE_TYPES.ISOSCELES;
         }    
         else {
-        return TRIANGLE_TYPES.EQUILATERAL;
+            return TRIANGLE_TYPES.EQUILATERAL;
         }
     }
 }
@@ -81,10 +81,10 @@ function Main() {
     const triangleType = getTriangleType();
     const prefix = "This triangle is "
     if(isSubmitted){  
-      const canvas = document.getElementById("canvas");
-      const context = canvas.getContext("2d");
-      context.clearRect(0, 0, canvas.width, canvas.height);
-      const roughCanvas = rough.canvas(canvas);
+        const canvas = document.getElementById("canvas");
+        const context = canvas.getContext("2d");
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        const roughCanvas = rough.canvas(canvas);
     if (triangleType === TRIANGLE_TYPES.IMPOSSIBLE){
         return "Is not possible to calculate this kind of triangle. Please check your input values, note that the sum of any two lengths should not be equal to or smaller than the 3rd length."
     }
@@ -115,12 +115,12 @@ const generator = rough.generator();
 
 
 const createElement = (id, x1, y1, x2, y2, type) => {
-    const canvas = document.getElementById("canvas");
-    var rect = canvas.getBoundingClientRect()
-    var cornerX = rect.left
-    var cornetY = rect.top
+  const canvas = document.getElementById("canvas");
+  var rect = canvas.getBoundingClientRect()
+  var cornerX = rect.left
+  var cornetY = rect.top
   const roughElement = generator.line(x1-cornerX, y1-cornetY, x2-cornerX, y2-cornetY)
-  return { id, x1, y1, x2, y2, type, roughElement };
+    return { id, x1, y1, x2, y2, type, roughElement };
 };
 
 
